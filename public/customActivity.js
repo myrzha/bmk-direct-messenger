@@ -37,10 +37,10 @@ define([
         $('#select1').change(function() {
             var message = getMessage();
             connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
-            var strMessage = $('#textMessage').text();
+            var strMessage = $('#textMessage').val();
 
             $('#message').html(message);
-            $('#message').html(strMessage);
+            $('#CurrentMessage').html(strMessage);
         });
     }
 
