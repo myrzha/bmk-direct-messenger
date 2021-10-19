@@ -10,7 +10,10 @@ define([
     var lastStepEnabled = false;
     var steps = [ // initialize to the same value as what's set in config.json for consistency
         { "label": "Step 1", "key": "step1" },
-        { "label": "Step 2", "key": "step2" }
+        { "label": "Step 2", "key": "step2" },
+        { "label": "Step 2", "key": "step2" },
+        { "label": "Step 3", "key": "step3" , "active": false }
+        { "label": "Step 4", "key": "step4" , "active": false }
     ];
     var currentStep = steps[0].key;
 
@@ -35,8 +38,9 @@ define([
         $('#select1').change(function() {
             var message = getMessage();
             connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
-            var strMessage = $('#CurrentMessage').text();
+            var strMessage = $('#textMessage').text();
 
+            $('#message').html(message);
             $('#message').html(strMessage);
         });
     }
