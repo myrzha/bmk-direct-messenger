@@ -35,8 +35,9 @@ define([
         $('#select1').change(function() {
             var message = getMessage();
             connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
+            var strMessage = $('#CurrentMessage').text();
 
-            $('#message').html(message);
+            $('#message').html(strMessage);
         });
     }
 
@@ -196,8 +197,8 @@ define([
     }
 
     function getMessage() {
-        return $('#CurrentMessage').text();
-        //return $('#select1').find('option:selected').attr('value').trim();
+        //return $('#CurrentMessage').text();
+        return $('#select1').find('option:selected').attr('value').trim();
     }
 
 });
