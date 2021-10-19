@@ -196,7 +196,7 @@ define([
     }
 
     function getMessage() {
-        return $('#CurrentMessage').val();
+        return $('#CurrentMessage').text();
         //return $('#select1').find('option:selected').attr('value').trim();
     }
 
