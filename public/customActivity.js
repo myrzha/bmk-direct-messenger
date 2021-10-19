@@ -15,6 +15,7 @@ define([
         { "label": "Step 4", "key": "step4" , "active": false }
     ];
     var currentStep = steps[0].key;
+    var strMessage;
 
     $(window).ready(onRender);
 
@@ -42,10 +43,9 @@ define([
             $('#message').html(message);
             $('#CurrentMessage').html(strMessage);
         });
-        $('#textMessage').change(function() {
+        $('#textMessage').on('change', function(){
             strMessage = $(this).val();
             $('#CurrentMessage').html(strMessage);
-            alert(strMessage);
         });
     }
 
@@ -54,8 +54,7 @@ define([
             payload = data;
         }
 
-        var message;
-        var strMessage;
+        var message;        
         var hasInArguments = Boolean(
             payload['arguments'] &&
             payload['arguments'].execute &&
