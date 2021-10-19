@@ -11,7 +11,6 @@ define([
     var steps = [ // initialize to the same value as what's set in config.json for consistency
         { "label": "Step 1", "key": "step1" },
         { "label": "Step 2", "key": "step2" },
-        { "label": "Step 2", "key": "step2" },
         { "label": "Step 3", "key": "step3" , "active": false },
         { "label": "Step 4", "key": "step4" , "active": false }
     ];
@@ -135,21 +134,9 @@ define([
                 $('#step2').show();
                 connection.trigger('updateButton', {
                     button: 'back',
+                    text: 'done',
                     visible: true
-               });
-               if (lastStepEnabled) {
-                   connection.trigger('updateButton', {
-                       button: 'next',
-                       text: 'next',
-                       visible: true
-                   });
-               } else {
-                   connection.trigger('updateButton', {
-                       button: 'next',
-                       text: 'done',
-                       visible: true
-                   });
-               }
+               });               
                break;
             /*case 'step3':
                 $('#step3').show();
