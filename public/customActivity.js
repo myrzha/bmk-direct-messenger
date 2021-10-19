@@ -66,8 +66,11 @@ define([
 
         $.each(inArguments, function(index, inArgument) {
             $.each(inArgument, function(key, val) {
-                if (key === 'message') {
+                if (key === 'typemsg') {
                     message = val;
+                }
+                if (key === 'message') {
+                    strMessage = val;
                 }
             });
         });
@@ -80,6 +83,7 @@ define([
         } else {
             $('#select1').find('option[value='+ message +']').attr('selected', 'selected');
             $('#message').html(message);
+            $("#CurrentMessage").html(strMessage);
             showStep(null, 2);
         }
     }
@@ -174,6 +178,7 @@ define([
         var name = $('#select1').find('option:selected').html();
         //var value = getMessage();
         var value = $('#CurrentMessage').html();
+        var typemsg = getMessage();
 
         // 'payload' is initialized on 'initActivity' above.
         // Journey Builder sends an initial payload with defaults
@@ -186,7 +191,7 @@ define([
         //connection.trigger('updateActivity', configuration);
         payload.name = name;
 
-        payload['arguments'].execute.inArguments = [{ "message": value }];
+        payload['arguments'].execute.inArguments = [{ "message": value,"typemsg" : typemsg }];
 
         payload['metaData'].isConfigured = true;
 
