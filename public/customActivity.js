@@ -71,7 +71,7 @@ define([
         } else {
             $('#select1').find('option[value='+ message +']').attr('selected', 'selected');
             $('#message').html(message);
-            showStep(null, 3);
+            showStep(null, 2);
         }
     }
 
@@ -87,8 +87,8 @@ define([
 
     function onClickedNext () {
         if (
-            (currentStep.key === 'step3' && steps[3].active === false) ||
-            currentStep.key === 'step4'
+            (currentStep.key === 'step2' && steps[2].active === false) ||
+            currentStep.key === 'step2'
         ) {
             save();
         } else {
