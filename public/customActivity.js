@@ -42,6 +42,11 @@ define([
             $('#message').html(message);
             $('#CurrentMessage').html(strMessage);
         });
+        $('#textMessage').change(function() {
+            strMessage = $(this).val();
+            $('#CurrentMessage').html(strMessage);
+            alert(strMessage);
+        });
     }
 
     function initialize (data) {
@@ -50,6 +55,7 @@ define([
         }
 
         var message;
+        var strMessage;
         var hasInArguments = Boolean(
             payload['arguments'] &&
             payload['arguments'].execute &&
@@ -131,7 +137,7 @@ define([
                 });
                 break;
             case 'step2':
-                $('#step2').show();
+                $('#step2').show();                
                 connection.trigger('updateButton', {
                     button: 'back',
                     text: 'done',
