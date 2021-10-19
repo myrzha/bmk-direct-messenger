@@ -15,9 +15,6 @@
         "execute": {
             "inArguments": [
                 {
-                    "emailAddress": "{{InteractionDefaults.Email}}"
-                },
-                {
                     "phoneNumber": "{{Contact.Default.PhoneNumber}}"
                 }
             ],
@@ -53,7 +50,7 @@
        "configModal": {
            "height": 200,
            "width": 300,
-           "fullscreen": true
+           "fullscreen": false
        }
     },
     "schema": {
@@ -65,13 +62,6 @@
                             "dataType": "Phone",
                             "isNullable": false,
                             "direction": "in"   
-                        }
-                    },
-                    {
-                        "emailAddress": {
-                            "dataType": "Email",
-                            "isNullable": false,
-                            "direction": "in"
                         }
                     }
                 ],

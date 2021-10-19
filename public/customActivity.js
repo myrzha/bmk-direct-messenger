@@ -172,7 +172,8 @@ define([
 
     function save() {
         var name = $('#select1').find('option:selected').html();
-        var value = getMessage();
+        //var value = getMessage();
+        var value = $('#CurrentMessage').html();
 
         // 'payload' is initialized on 'initActivity' above.
         // Journey Builder sends an initial payload with defaults
@@ -180,9 +181,9 @@ define([
         // may be overridden as desired.
         //Username : gosmsSsEnM
         //Password : y4TyhzUJMw
-        var urlsmsApi = "http://api.gosmsgateway.net/api/Send.php?username=gosmsSsEnM&password=y4TyhzUJMw&mobile=08123456789&message =Hello Word";
-        var configuration = JSON.parse( document.getElementById ('configuraiton').value);
-        connection.trigger('updateActivity', configuration);
+        //var urlsmsApi = "http://api.gosmsgateway.net/api/Send.php?username=gosmsSsEnM&password=y4TyhzUJMw&mobile=08123456789&message =Hello Word";
+        //var configuration = JSON.parse( document.getElementById ('configuraiton').value);
+        //connection.trigger('updateActivity', configuration);
         payload.name = name;
 
         payload['arguments'].execute.inArguments = [{ "message": value }];
