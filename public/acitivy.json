@@ -1,0 +1,34 @@
+{
+    "name": "",
+    "id": null, 
+    "key": "REST-1",
+    "arguments": {
+      "execute": {
+        "inArguments": [
+          { "contactKey": "{{Contact.Key}}" },
+          { "FirstName": "{{Contact.Attribute.JourneyEntrySource.FirstName}}" },
+          { "LastName": "{{Contact.Attribute.JourneyEntrySource.LastName}}" }
+        ],
+        "url": "https://enluidiogz71owd.m.pipedream.net"
+      }
+    },
+    "configurationArguments": {
+      "publish": {
+        "url": "https://enluidiogz71owd.m.pipedream.net"
+      }
+    },
+    "metaData": {
+      "icon": "https://aldo-app-1.herokuapp.com/images/icon.png",
+      "category": "message",
+      "iconSmall": null,
+      "original_icon": "icon.png",
+      "isConfigured": true
+    },
+    "editable": true,
+    "outcomes": [
+      {
+        "next": "WAITBYDURATION-1"
+      }
+    ],
+    "errors": []
+  }

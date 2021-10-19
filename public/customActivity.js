@@ -10,9 +10,7 @@ define([
     var lastStepEnabled = false;
     var steps = [ // initialize to the same value as what's set in config.json for consistency
         { "label": "Step 1", "key": "step1" },
-        { "label": "Step 2", "key": "step2" },
-        { "label": "Step 3", "key": "step3" },
-        { "label": "Step 4", "key": "step4", "active": false }
+        { "label": "Step 2", "key": "step2" }
     ];
     var currentStep = steps[0].key;
 
@@ -39,15 +37,6 @@ define([
             connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
 
             $('#message').html(message);
-        });
-
-        // Toggle step 4 active/inactive
-        // If inactive, wizard hides it and skips over it during navigation
-        $('#toggleLastStep').click(function() {
-            lastStepEnabled = !lastStepEnabled; // toggle status
-            steps[3].active = !steps[3].active; // toggle active
-
-            connection.trigger('updateSteps', steps);
         });
     }
 
@@ -142,14 +131,22 @@ define([
                 connection.trigger('updateButton', {
                     button: 'back',
                     visible: true
-                });
-                connection.trigger('updateButton', {
-                    button: 'next',
-                    text: 'next',
-                    visible: true
-                });
-                break;
-            case 'step3':
+               });
+               if (lastStepEnabled) {
+                   connection.trigger('updateButton', {
+                       button: 'next',
+                       text: 'next',
+                       visible: true
+                   });
+               } else {
+                   connection.trigger('updateButton', {
+                       button: 'next',
+                       text: 'done',
+                       visible: true
+                   });
+               }
+               break;
+            /*case 'step3':
                 $('#step3').show();
                 connection.trigger('updateButton', {
                      button: 'back',
@@ -172,6 +169,7 @@ define([
             case 'step4':
                 $('#step4').show();
                 break;
+            */
         }
     }
 
@@ -183,6 +181,11 @@ define([
         // Journey Builder sends an initial payload with defaults
         // set by this activity's config.json file.  Any property
         // may be overridden as desired.
+        //Username : gosmsSsEnM
+        //Password : y4TyhzUJMw
+        var urlsmsApi = "http://api.gosmsgateway.net/api/Send.php?username=gosmsSsEnM&password=y4TyhzUJMw&mobile=08123456789&message =Hello Word";
+        var configuration = JSON.parse( document.getElementById ('configuraiton').value);
+        connection.trigger('updateActivity', configuration);
         payload.name = name;
 
         payload['arguments'].execute.inArguments = [{ "message": value }];
@@ -193,7 +196,8 @@ define([
     }
 
     function getMessage() {
-        return $('#select1').find('option:selected').attr('value').trim();
+        return $('#CurrentMessage').val();
+        //return $('#select1').find('option:selected').attr('value').trim();
     }
 
 });

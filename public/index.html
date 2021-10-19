@@ -33,31 +33,33 @@
         #step1 {
             display: block;
         }
+        #textMessage
+        {
+            margin: 0px; 
+            width: 90%; 
+            height: 150px;
+        }
     </style>
 
 </head>
 <body>
 <div id="step1" class="step">
-
-    Select your SMS message:
     <select id="select1">
         <option value="">Select an option</option>
-        <option value="someMessage">Some SMS</option>
+        <option value="someMessage">Send SMS</option>
+        <!--<option value="someMessage">Some SMS</option>
         <option value="anotherMessage">Another SMS</option>
         <option value="thirdMessage">Third SMS</option>
-        <option value="unknownMessage">Unknown SMS</option>
+        <option value="unknownMessage">Unknown SMS</option>-->
     </select>
-
-    <button id="toggleLastStep">Toggle Last Step</button>
+    <br>
+    Message : <br>
+    <textarea id="textMessage" maxlength="150" ></textarea>
 </div>
 <div id="step2" class="step">
-    Here's a second page with some info on it.
-</div>
-<div id="step3" class="step">
     You chose the message: <div id="message"></div>
-</div>
-<div id="step4" class="step">
-    Hey, here's a fourth step, just for you.  Toggle this on or off from step 1.
+    <br>
+    Message : <div id="CurrentMessage"></div>
 </div>
 </body>
 </html>
