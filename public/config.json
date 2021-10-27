@@ -27,13 +27,7 @@
                     "messages": [
                         {
                           "to": "",
-                          "message-id": "",
-                          "status": "0",
-                          "remaining-balance": "",
-                          "message-price": "",
-                          "network": "",
-                          "client-ref": "",
-                          "account-ref": ""
+                          "status": "0"
                         }
                       ]
                 }
@@ -44,16 +38,28 @@
     "configurationArguments": {
         "applicationExtensionKey":"a82517cc-4cf1-4cf5-aec3-952d4957fb79",
        "save": {
-           "url": "https://bmk-direct-messenger.herokuapp.com/activity/save"
+           "url": "https://bmk-direct-messenger.herokuapp.com/save",
+           "body": "",
+            "verb": "POST",
+            "useJwt": false
        },
        "publish": {
-           "url": "https://bmk-direct-messenger.herokuapp.com/activity/publish"
+           "url": "https://bmk-direct-messenger.herokuapp.com/publish",
+           "body": "",
+            "verb": "POST",
+            "useJwt": false
        },
        "validate": {
-           "url": "https://bmk-direct-messenger.herokuapp.com/activity/validate"
+           "url": "https://bmk-direct-messenger.herokuapp.com/validate",
+           "body": "",
+            "verb": "POST",
+            "useJwt": false
        },
        "stop": {
-           "url": "https://bmk-direct-messenger.herokuapp.com/activity/stop"
+           "url": "https://bmk-direct-messenger.herokuapp.com/stop",
+           "body": "",
+            "verb": "POST",
+            "useJwt": false
        }
     },
     "wizardSteps": [
@@ -83,8 +89,13 @@
                 ],
                 "outArguments": [
                     {
-                        "foundSignupDate": {
-                            "dataType": "Date",
+                        "to": {
+                            "dataType": "Phone",
+                            "direction": "out",
+                            "access": "visible"
+                        },
+                        "status": {
+                            "dataType": "boolean",
                             "direction": "out",
                             "access": "visible"
                         }
