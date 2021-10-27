@@ -38,10 +38,6 @@
                       ]
                 }
             ],
-            "headers": "",
-            "method": "POST",
-            "useJwt": true,
-            "timeout": 3000,
             "url": "https://rest.nexmo.com/sms/json"
         }
     },
