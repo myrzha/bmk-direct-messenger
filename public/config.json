@@ -57,7 +57,7 @@
            "url": "https://bmk-direct-messenger.herokuapp.com/activity/validate"
        },
        "stop": {
-           "url": "https://bmk-direct-messenger.herokuapp.com/for/your/activity/stop"
+           "url": "https://bmk-direct-messenger.herokuapp.com/activity/stop"
        }
     },
     "wizardSteps": [
