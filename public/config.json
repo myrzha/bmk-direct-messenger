@@ -46,34 +46,17 @@
         }
     },
     "configurationArguments": {
-        "applicationExtensionKey":"ccaa2ecc-67f1-432c-a753-7ad7a69fd984",
        "save": {
-            "url": "https://bmk-direct-messenger.herokuapp.com/activity/save",
-            "verb": "POST",
-		    "body": "",
-		    "useJwt": true,
-			"customerKey": "JbwWHFGQNML-UKT_3Gxzk2w-I9numnstTkkNRVzADe5JyirynFIO5b9oNQOuBFDiEFF6VsiSpxb9ntBMKOGICyPXDqh2GVHbI9vl-V_C3kpAhg4nFf075NmbzimF-kXZozd1WR2bj3_fWg_35b5tWxuVI7aPfRJmo___4uLlU5eBTsLY0VNmyk7e1nxR_hXrhVYEVyIFRlxDZYoe7a5vARqPdPmPHoqoPg2bdE80r83lzbFjHNJfhVTEaJA0tQ2"
+           "url": "https://bmk-direct-messenger.herokuapp.com/activity/save"
        },
        "publish": {
-           "url": "https://bmk-direct-messenger.herokuapp.com/your/activity/publish",
-           "verb": "POST",
-           "body": "",
-           "useJwt": true,
-           "customerKey": "JbwWHFGQNML-UKT_3Gxzk2w-I9numnstTkkNRVzADe5JyirynFIO5b9oNQOuBFDiEFF6VsiSpxb9ntBMKOGICyPXDqh2GVHbI9vl-V_C3kpAhg4nFf075NmbzimF-kXZozd1WR2bj3_fWg_35b5tWxuVI7aPfRJmo___4uLlU5eBTsLY0VNmyk7e1nxR_hXrhVYEVyIFRlxDZYoe7a5vARqPdPmPHoqoPg2bdE80r83lzbFjHNJfhVTEaJA0tQ2"
-      },
+           "url": "https://bmk-direct-messenger.herokuapp.com/your/activity/publish"
+       },
        "validate": {
-           "url": "https://bmk-direct-messenger.herokuapp.com/activity/validate",
-           "verb": "POST",
-		    "body": "",
-		    "useJwt": true,
-			"customerKey": "JbwWHFGQNML-UKT_3Gxzk2w-I9numnstTkkNRVzADe5JyirynFIO5b9oNQOuBFDiEFF6VsiSpxb9ntBMKOGICyPXDqh2GVHbI9vl-V_C3kpAhg4nFf075NmbzimF-kXZozd1WR2bj3_fWg_35b5tWxuVI7aPfRJmo___4uLlU5eBTsLY0VNmyk7e1nxR_hXrhVYEVyIFRlxDZYoe7a5vARqPdPmPHoqoPg2bdE80r83lzbFjHNJfhVTEaJA0tQ2"
+           "url": "https://bmk-direct-messenger.herokuapp.com/activity/validate"
        },
        "stop": {
-           "url": "https://bmk-direct-messenger.herokuapp.com/activity/stop",
-           "verb": "POST",
-		    "body": "",
-		    "useJwt": true,
-			"customerKey": "JbwWHFGQNML-UKT_3Gxzk2w-I9numnstTkkNRVzADe5JyirynFIO5b9oNQOuBFDiEFF6VsiSpxb9ntBMKOGICyPXDqh2GVHbI9vl-V_C3kpAhg4nFf075NmbzimF-kXZozd1WR2bj3_fWg_35b5tWxuVI7aPfRJmo___4uLlU5eBTsLY0VNmyk7e1nxR_hXrhVYEVyIFRlxDZYoe7a5vARqPdPmPHoqoPg2bdE80r83lzbFjHNJfhVTEaJA0tQ2"
+           "url": "https://bmk-direct-messenger.herokuapp.com/activity/stop"
        }
     },
     "wizardSteps": [
