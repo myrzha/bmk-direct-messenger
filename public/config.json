@@ -46,6 +46,7 @@
         }
     },
     "configurationArguments": {
+        "applicationExtensionKey":"a82517cc-4cf1-4cf5-aec3-952d4957fb79",
        "save": {
            "url": "https://bmk-direct-messenger.herokuapp.com/activity/save"
        },
@@ -56,7 +57,7 @@
            "url": "https://bmk-direct-messenger.herokuapp.com/activity/validate"
        },
        "stop": {
-           "url": "https://bmk-direct-messenger.herokuapp.com/activity/stop"
+           "url": "https://bmk-direct-messenger.herokuapp.com/for/your/activity/stop"
        }
     },
     "wizardSteps": [
