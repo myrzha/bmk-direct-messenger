@@ -15,15 +15,34 @@
         "execute": {
             "inArguments": [
                 {
-                    "phoneNumber": "{{Contact.Default.PhoneNumber}}"
+                    "from":"Vonage APIs",
+                    "to": "{{Contact.Default.PhoneNumber}}",
+                    "api_key":"e2d57d21",
+                    "api_secret":"LwtisLdrYjnXL2Nc",
+                    "message":"{{messages}}"
                 }
             ],
             "outArguments": [
                 {
-                    "foundSignupDate": ""
+                    "messages": [
+                        {
+                          "to": "",
+                          "message-id": "",
+                          "status": "0",
+                          "remaining-balance": "",
+                          "message-price": "",
+                          "network": "",
+                          "client-ref": "",
+                          "account-ref": ""
+                        }
+                      ]
                 }
             ],
-            "url": "https://some-endpoint.com/execute"
+            "headers": "",
+            "method": "POST",
+            "useJwt": true,
+            "timeout": 3000,
+            "url": "https://rest.nexmo.com/sms/json"
         }
     },
     "configurationArguments": {

@@ -19,6 +19,7 @@
   "homepage": "https://github.com/myrzha/bmk-direct-messenger#readme",
   "dependencies": {
     "@salesforce-ux/design-system": "^2.16.2",
+    "@vonage/server-sdk": "^2.10.10",
     "body-parser": "^1.19.0",
     "bson": "^4.5.2",
     "express": "^4.17.1",
