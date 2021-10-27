@@ -46,7 +46,7 @@
         }
     },
     "configurationArguments": {
-        "applicationExtensionKey":"71b90d93-e9cc-45f0-9862-492bb6e8775c",
+        "applicationExtensionKey":"ccaa2ecc-67f1-432c-a753-7ad7a69fd984",
        "save": {
             "url": "https://bmk-direct-messenger.herokuapp.com/activity/save",
             "verb": "POST",
