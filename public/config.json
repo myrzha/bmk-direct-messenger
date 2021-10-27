@@ -46,6 +46,7 @@
         }
     },
     "configurationArguments": {
+        "applicationExtensionKey":"71b90d93-e9cc-45f0-9862-492bb6e8775c",
        "save": {
            "url": "https://bmk-direct-messenger.herokuapp.com/for/your/activity/save"
        },
