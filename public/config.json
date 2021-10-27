@@ -51,7 +51,7 @@
            "url": "https://bmk-direct-messenger.herokuapp.com/activity/save"
        },
        "publish": {
-           "url": "https://bmk-direct-messenger.herokuapp.com/your/activity/publish"
+           "url": "https://bmk-direct-messenger.herokuapp.com/activity/publish"
        },
        "validate": {
            "url": "https://bmk-direct-messenger.herokuapp.com/activity/validate"
