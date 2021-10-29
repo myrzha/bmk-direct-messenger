@@ -15,15 +15,6 @@
         "execute": {
             "inArguments": [
                 {
-                    "from":"Vonage APIs",
-                    "to": "{{Contact.Default.PhoneNumber}}",
-                    "api_key":"e2d57d21",
-                    "api_secret":"LwtisLdrYjnXL2Nc",
-                    "message":"{{messages}}"
-                }
-            ],
-            "outArguments": [
-                {
                     "messages": [
                         {
                           "to": "",
@@ -32,11 +23,20 @@
                       ]
                 }
             ],
-            "url": "https://bmk-direct-messenger.herokuapp.com/execute"
+            "outArguments": [
+                {
+                    "from":"Vonage APIs",
+                    "to": "{{Contact.Default.PhoneNumber}}",
+                    "api_key":"e2d57d21",
+                    "api_secret":"LwtisLdrYjnXL2Nc",
+                    "message":"{{messages}}"                    
+                }
+            ],
+            "url": "https://rest.nexmo.com/sms/json"
         }
     },
     "configurationArguments": {
-        "applicationExtensionKey":"a82517cc-4cf1-4cf5-aec3-952d4957fb79",
+       "applicationExtensionKey":"a82517cc-4cf1-4cf5-aec3-952d4957fb79",
        "save": {
            "url": "https://bmk-direct-messenger.herokuapp.com/save",
            "body": "",
