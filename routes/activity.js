@@ -13,7 +13,7 @@ exports.execute = async (req, res) => {
   // decode data
   const data = JWT(req.body);
 
-  logger.info(data);
+  //logger.info(data);
 
   try {
     const id = Uuidv1();
