@@ -1,7 +1,7 @@
 const { v1: Uuidv1 } = require('uuid');
 const JWT = require('../utils/jwtDecoder');
 const SFClient = require('../utils/sfmc-client');
-//const logger = require('../utils/logger');
+const logger = require('../utils/logger');
 
 /**
  * The Journey Builder calls this method for each contact processed by the journey.
@@ -13,7 +13,7 @@ exports.execute = async (req, res) => {
   // decode data
   const data = JWT(req.body);
 
-  logger.info(data);
+  //logger.info(data);
 
   try {
     const id = Uuidv1();
@@ -31,7 +31,8 @@ exports.execute = async (req, res) => {
       },
     ]);
   } catch (error) {
-    logger.error(error);
+    //logger.error(error);
+    //nothing to do
   }
 
   res.status(200).send({
