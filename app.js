@@ -2,6 +2,7 @@
 
 var express     = require('express');
 var bodyParser  = require('body-parser');
+const logger = require('morgan');
 var http        = require('http');
 var path        = require('path');
 const helmet = require('helmet');
@@ -45,5 +46,5 @@ app.use(require('body-parser').raw({
 }));
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+  logger.log('Express server listening on port ' + app.get('port'));
 });
