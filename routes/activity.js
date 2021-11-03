@@ -13,7 +13,7 @@ exports.execute = async (req, res) => {
   // decode data
   const data = JWT(req.body);
 
-  //logger.info(data);
+  console.info(data);
 
   try {
     const id = Uuidv1();
@@ -31,7 +31,7 @@ exports.execute = async (req, res) => {
       },
     ]);
   } catch (error) {
-    //logger.error(error);
+    console.error(error);
   }
 
   res.status(200).send({

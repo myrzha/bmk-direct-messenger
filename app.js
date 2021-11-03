@@ -1,5 +1,16 @@
 'use strict';
 
+const activityRouter = require('./routes/activity');
+const cookieParser = require('cookie-parser');
+const express = require('express');
+const helmet = require('helmet');
+const httpErrors = require('http-errors');
+const logger = require('morgan');
+const path = require('path');
+const bodyParser = require('body-parser');
+const routes = require('./routes/index');
+const activityRouter = require('./routes/activity');
+
 var express     = require('express');
 var bodyParser  = require('body-parser');
 var http        = require('http');
@@ -10,7 +21,6 @@ app.set('port', process.env.PORT || 3000);
 app.use(bodyParser.raw({type: 'application/jwt'}));
 app.use('/', express.static(path.join(__dirname, 'public')));
 app.use('/assets', express.static(path.join(__dirname, './node_modules/@salesforce-ux/design-system/assets')));
-//app.use('/', "/public/customActivity.js")
 
 
 app.get('/', function(req, res){
