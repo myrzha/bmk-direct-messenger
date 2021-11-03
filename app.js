@@ -1,13 +1,8 @@
 'use strict';
-
-const activityRouter = require('./routes/activity');
 const cookieParser = require('cookie-parser');
-const express = require('express');
 const helmet = require('helmet');
 const httpErrors = require('http-errors');
 const logger = require('morgan');
-const path = require('path');
-const bodyParser = require('body-parser');
 const routes = require('./routes/index');
 const activityRouter = require('./routes/activity');
 
