@@ -32,35 +32,30 @@
                     "message":"{{messages}}"                    
                 }
             ],
-            "url": "https://rest.nexmo.com/sms/json"
+            "url": "https://$DOMAIN/journey/execute"
         }
     },
     "configurationArguments": {
-       "applicationExtensionKey":"a82517cc-4cf1-4cf5-aec3-952d4957fb79",
-       "save": {
-           "url": "https://bmk-direct-messenger.herokuapp.com/save",
-           "body": "",
+        "save": {
+            "url": "https://$DOMAIN/journey/save",
             "verb": "POST",
-            "useJwt": false
-       },
-       "publish": {
-           "url": "https://bmk-direct-messenger.herokuapp.com/publish",
-           "body": "",
+            "useJwt": true
+          },
+          "publish": {
+            "url": "https://$DOMAIN/journey/publish",
             "verb": "POST",
-            "useJwt": false
-       },
-       "validate": {
-           "url": "https://bmk-direct-messenger.herokuapp.com/validate",
-           "body": "",
+            "useJwt": true
+          },
+          "stop": {
+            "url": "https://$DOMAIN/journey/stop",
             "verb": "POST",
-            "useJwt": false
-       },
-       "stop": {
-           "url": "https://bmk-direct-messenger.herokuapp.com/stop",
-           "body": "",
+            "useJwt": true
+          },
+          "validate": {
+            "url": "https://$DOMAIN/journey/validate",
             "verb": "POST",
-            "useJwt": false
-       }
+            "useJwt": true
+          }
     },
     "wizardSteps": [
        { "label": "Step 1", "key": "step1" },
